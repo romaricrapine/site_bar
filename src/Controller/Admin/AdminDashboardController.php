@@ -2,10 +2,12 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Administrateur;
+use App\Entity\Administrateur;;
+
 use App\Entity\Categories;
+use App\Entity\Events;
+use App\Entity\Informations;
 use App\Entity\Products;
-use App\Entity\SubCatego;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -34,25 +36,32 @@ class AdminDashboardController extends AbstractDashboardController
 
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
 
-        yield MenuItem::section('Gérér les produits');
-        yield MenuItem::subMenu('Produits', 'fas fa-bars')
+        yield MenuItem::section('Gérér les Produits');
+        yield MenuItem::subMenu('Les Produits', 'fas fa-bars')
             ->setSubItems([
-                MenuItem::linkToCrud('Ajouter un Produit', 'fas fa-plus', Products::class)->setAction(Crud::PAGE_NEW),
-                MenuItem::linkToCrud('Montrer les Produits', 'fas fa-eye', Products::class)
+                MenuItem::linkToCrud('Ajouter un Produit', 'fas fa-plus', Products::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
+                MenuItem::linkToCrud('Afficher les Produits', 'fas fa-eye', Products::class)
             ]);
 
-        yield MenuItem::section('Gérer les sous-catégories');
-        yield MenuItem::subMenu('Les sous-catégories', 'fas fa-bars')
+        yield MenuItem::section('Gérér les Catégories');
+        yield MenuItem::subMenu('Les Catégories', 'fas fa-bars')
             ->setSubItems([
-                MenuItem::linkToCrud('Ajouter une sous-catégories', 'fas fa-plus', SubCatego::class)->setAction(Crud::PAGE_NEW),
-                MenuItem::linkToCrud('Ajouter une sous-catégories', 'fas fa-eye', SubCatego::class)
+                MenuItem::linkToCrud('Ajouter uns Catégorie', 'fas fa-plus', Categories::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
+                MenuItem::linkToCrud('Afficher les Catégories', 'fas fa-eye', Categories::class)
             ]);
 
-        yield MenuItem::section('Gérer les catégories');
-        yield MenuItem::subMenu('Les catégories', 'fas fa-bars')
+        yield MenuItem::section('Gérer les Événements');
+        yield MenuItem::subMenu('Les Événements', 'fas fa-bars')
             ->setSubItems([
-                MenuItem::linkToCrud('Ajouter une catégories', 'fas fa-plus', Categories::class)->setAction(Crud::PAGE_NEW),
-                MenuItem::linkToCrud('Montrer les catégories', 'fas fa-eye', Categories::class)
+                MenuItem::linkToCrud('Ajouter un Événement', 'fas fa-plus', Events::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
+                MenuItem::linkToCrud('Afficher les Événements', 'fas fa-eye', Events::class)
+            ]);
+
+        yield MenuItem::section('Gérer les Informations');
+        yield MenuItem::subMenu('Les Informations', 'fas fa-bars')
+            ->setSubItems([
+                MenuItem::linkToCrud('Ajouter une Information', 'fas fa-plus', Informations::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
+                MenuItem::linkToCrud('Afficher les Informations', 'fas fa-eye', Informations::class)
             ]);
 
         yield MenuItem::section('Gérer l\'équipe');

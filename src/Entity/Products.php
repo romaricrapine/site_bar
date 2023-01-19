@@ -17,44 +17,23 @@ class Products
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\ManyToOne(inversedBy: 'products')]
-    private ?SubCatego $tagSubCatego = null;
-
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $descriptions = null;
+    private ?string $description = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?bool $first_options = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?bool $second_options = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?bool $third_options = null;
+    #[ORM\Column]
+    private ?int $price = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2, nullable: true)]
-    private ?string $price_f_options = null;
+    private ?string $percentAlcool = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2, nullable: true)]
-    private ?string $price_s_options = null;
-
-    #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2, nullable: true)]
-    private ?string $price_t_options = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?int $percent_alcool = null;
+    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    private array $quantity = [];
 
     #[ORM\Column(nullable: true)]
     private ?bool $active = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name_f_options = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name_s_options = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name_t_options = null;
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    private ?Categories $categorie = null;
 
     public function getId(): ?int
     {
@@ -73,110 +52,50 @@ class Products
         return $this;
     }
 
-    public function getTagSubCatego(): ?SubCatego
+    public function getDescription(): ?string
     {
-        return $this->tagSubCatego;
+        return $this->description;
     }
 
-    public function setTagSubCatego(?SubCatego $tagSubCatego): self
+    public function setDescription(string $description): self
     {
-        $this->tagSubCatego = $tagSubCatego;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getDescriptions(): ?string
+    public function getPrice(): ?int
     {
-        return $this->descriptions;
+        return $this->price;
     }
 
-    public function setDescriptions(?string $descriptions): self
+    public function setPrice(int $price): self
     {
-        $this->descriptions = $descriptions;
+        $this->price = $price;
 
         return $this;
     }
 
-    public function isFirstOptions(): ?bool
+    public function getPercentAlcool(): ?string
     {
-        return $this->first_options;
+        return $this->percentAlcool;
     }
 
-    public function setFirstOptions(?bool $first_options): self
+    public function setPercentAlcool(?string $percentAlcool): self
     {
-        $this->first_options = $first_options;
+        $this->percentAlcool = $percentAlcool;
 
         return $this;
     }
 
-    public function isSecondOptions(): ?bool
+    public function getQuantity(): array
     {
-        return $this->second_options;
+        return $this->quantity;
     }
 
-    public function setSecondOptions(?bool $second_options): self
+    public function setQuantity(?array $quantity): self
     {
-        $this->second_options = $second_options;
-
-        return $this;
-    }
-
-    public function isThirdOptions(): ?bool
-    {
-        return $this->third_options;
-    }
-
-    public function setThirdOptions(?bool $third_options): self
-    {
-        $this->third_options = $third_options;
-
-        return $this;
-    }
-
-    public function getPriceFOptions(): ?string
-    {
-        return $this->price_f_options;
-    }
-
-    public function setPriceFOptions(?string $price_f_options): self
-    {
-        $this->price_f_options = $price_f_options;
-
-        return $this;
-    }
-
-    public function getPriceSOptions(): ?string
-    {
-        return $this->price_s_options;
-    }
-
-    public function setPriceSOptions(?string $price_s_options): self
-    {
-        $this->price_s_options = $price_s_options;
-
-        return $this;
-    }
-
-    public function getPriceTOptions(): ?string
-    {
-        return $this->price_t_options;
-    }
-
-    public function setPriceTOptions(?string $price_t_options): self
-    {
-        $this->price_t_options = $price_t_options;
-
-        return $this;
-    }
-
-    public function getPercentAlcool(): ?int
-    {
-        return $this->percent_alcool;
-    }
-
-    public function setPercentAlcool(?int $percent_alcool): self
-    {
-        $this->percent_alcool = $percent_alcool;
+        $this->quantity = $quantity;
 
         return $this;
     }
@@ -193,40 +112,16 @@ class Products
         return $this;
     }
 
-    public function getNameFOptions(): ?string
+    public function getCategorie(): ?Categories
     {
-        return $this->name_f_options;
+        return $this->categorie;
     }
 
-    public function setNameFOptions(?string $name_f_options): self
+    public function setCategorie(?Categories $categorie): self
     {
-        $this->name_f_options = $name_f_options;
+        $this->categorie = $categorie;
 
         return $this;
     }
-
-    public function getNameSOptions(): ?string
-    {
-        return $this->name_s_options;
-    }
-
-    public function setNameSOptions(?string $name_s_options): self
-    {
-        $this->name_s_options = $name_s_options;
-
-        return $this;
-    }
-
-    public function getNameTOptions(): ?string
-    {
-        return $this->name_t_options;
-    }
-
-    public function setNameTOptions(?string $name_t_options): self
-    {
-        $this->name_t_options = $name_t_options;
-
-        return $this;
-    }
-
+    
 }
