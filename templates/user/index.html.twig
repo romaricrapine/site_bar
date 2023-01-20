@@ -211,15 +211,15 @@
                     <div class="menu-day-product-content">
                         <div class="menu-day-tab-header">
                             <ul class="menu-day-tab-list">
-                                {% for _products in product %}
+{#                                {% for _products in product %}#}
                                     <li>
-                                        <a href="#tab-menu-{{ _products.id }}">
+{#                                        <a href="#tab-menu-{{ _products.id }}">#}
                                             <i class="icofont-fruits"></i>
                                             <br>
-                                            {{ _products.tagSubCatego }}
+{#                                            {{ _products.tagSubCatego }}#}
                                         </a>
                                     </li>
-                                {% endfor %}
+{#                                {% endfor %}#}
                                 <li>
                                     <a href="#tab-menu-2">
                                         <i class="icofont-fruits"></i>
@@ -230,56 +230,55 @@
                             </ul>
                         </div>
                         <div class="menu-day-main-tabs-content">
-                            {% set counter = ( counter | default(0) ) + 1 %}
-                            <div class="menu-single-tab-content active" id="tab-menu-{{ counter }}">
+                            <div class="menu-single-tab-content active" id="tab-menu-">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _products in product %}
-                                            {% if _products.active == true %}
+{#                                        {% for _products in product %}#}
+{#                                            {% if _products.active == true %}#}
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <div style="color: #c1c1c1">{{ _products.descriptions|raw }}</div>
+{#                                                               href="#">{{ _products.name }}</a>#}
+{#                                                            <div style="color: #c1c1c1">{{ _products.descriptions|raw }}</div>#}
                                                         </div>
                                                         <div class="menu-product-price">
-                                                            {% if _products.firstOptions == true %}
+{#                                                            {% if _products.firstOptions == true %}#}
                                                                 <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-                                                                    {{ _products.nameFOptions }}
-                                                                    {% if _products.nameFOptions == true %}
+{#                                                                    {{ _products.nameFOptions }}#}
+{#                                                                    {% if _products.nameFOptions == true %}#}
                                                                         :
-                                                                    {% endif %}
-                                                                    {{ _products.priceFOptions / 100 }} €
+{#                                                                    {% endif %}#}
+{#                                                                    {{ _products.priceFOptions / 100 }} €#}
                                                                     </span>
-                                                            {% endif %}
+{#                                                            {% endif %}#}
                                                         </div>
                                                         <div class="menu-product-price">
-                                                            {% if _products.secondOptions == true %}
+{#                                                            {% if _products.secondOptions == true %}#}
                                                                 <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-                                                                    {{ _products.nameSOptions }}
-                                                                    {% if _products.nameFOptions == true %}
+{#                                                                    {{ _products.nameSOptions }}#}
+{#                                                                    {% if _products.nameFOptions == true %}#}
                                                                         :
-                                                                    {% endif %}
-                                                                    {{ _products.priceSOptions / 100 }} €
+{#                                                                    {% endif %}#}
+{#                                                                    {{ _products.priceSOptions / 100 }} €#}
                                                                     </span>
-                                                            {% endif %}
+{#                                                            {% endif %}#}
                                                         </div>
                                                         <div class="menu-product-price">
-                                                            {% if _products.thirdOptions == true %}
+{#                                                            {% if _products.thirdOptions == true %}#}
                                                                 <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-                                                                    {{ _products.nameTOptions }}
-                                                                    {% if _products.nameFOptions == true %}
+{#                                                                    {{ _products.nameTOptions }}#}
+{#                                                                    {% if _products.nameFOptions == true %}#}
                                                                         :
-                                                                    {% endif %}
-                                                                    {{ _products.priceTOptions / 100 }} €
+{#                                                                    {% endif %}#}
+{#                                                                    {{ _products.priceTOptions / 100 }} €#}
                                                                     </span>
-                                                            {% endif %}
+{#                                                            {% endif %}#}
                                                         </div>
                                                     </div>
                                                 </div>
-                                            {% endif %}
-                                        {% endfor %}
+{#                                            {% endif %}#}
+{#                                        {% endfor %}#}
                                         <div class="menu-single-product-horizontal">
                                             <div class="menu-product-info-box">
                                                 <div class="menu-product-details">
