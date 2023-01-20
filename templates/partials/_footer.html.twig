@@ -1,0 +1,61 @@
+{% if
+    app.request.attributes.get('_route') == 'app_login' or
+    app.request.attributes.get('_route') == 'app_register'
+%}
+
+{% else %}
+
+<!-- Start Footer Area -->
+<footer class="footer-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3>Localisation</h3>
+                    </div>
+                    <p>526 Melrose Street,
+                        <br>Water Mill, 11976 New York</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3>Opening Hours</h3>
+                    </div>
+                    <p>Monday to Saturday
+                        <br>8:00 AM - 11:00 PM
+                        <br>Closed Sundays</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3>Contact Info</h3>
+                    </div>
+                    <div class="footer-info-contact">	<a class="footer-number" href="tel:0802235678">+080 707 555-321</a>
+                    </div>
+                    <div class="footer-info-contact">	<a href="mailto:demo@example.com">demo@example.com</a>
+                    </div>
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#"> <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Section -->
+
+{% endif %}

@@ -4,68 +4,6 @@
 
 {% block body %}
 
-    <!-- Start Navbar Area -->
-    <div class="navbar-area">
-        <div class="vegan-responsive-nav">
-            <div class="container">
-                <div class="vegan-responsive-menu">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="{{ asset('build/images/logo.png') }}" class="white-logo" alt="logo">
-                            <img src="{{ asset('build/images/logo-black.png') }}" class="black-logo" alt="logo">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="vegan-nav">
-            <div class="container">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{ asset('build/images/logo.png') }}" class="white-logo" alt="logo">
-                        <img src="{{ asset('build/images/logo-black.png') }}" class="black-logo" alt="logo">
-                    </a>
-                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="about.html" class="nav-link">Page 1</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">DropDown
-                                    <i class="fas fa-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="menu-1.html" class="nav-link">DropDown 1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="menu-2.html" class="nav-link">DropDown 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Page 2</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">Évènement</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="other-option">
-                            <a class="default-btn" href="#">Bistrot</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- End Navbar Area -->
-
     <!-- Start Home Area -->
     <div class="home-area">
         <div class="d-table">
@@ -693,12 +631,7 @@
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-lg-6 col-md-4">
-                    <div class="video-box">
-                        <a href="https://www.youtube.com/watch?v=xg7iNd0qkDM" class="video-btn popup-youtube">
-                            {#                            <img src="assets/img/play-button-light.svg" alt="play button icon"> #}
-                        </a>
-                        <h3>Intro Video</h3>
-                    </div>
+
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-8">
                     <div class="store-location-opening-hours-box">
@@ -732,14 +665,14 @@
     </section>
     <!-- Video Opening Hours Section End -->
 
-    <!-- Blog Section Start -->
+    <!-- Event Section Start -->
     <section id="blog" class="blog-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="section-title">
-                        <h5>Latest News at Vegan</h5>
-                        <h2>Our Blog & Event</h2>
+                        <h5>Les récents Évènements du BHV</h5>
+                        <h2>Les Évènements</h2>
                     </div>
                 </div>
             </div>
@@ -747,203 +680,36 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-img">
-                            <a href="#">
-                                {#                                <img src="assets/img/blog/blog-1.jpg" alt=""/> #}
+                            <a href="#"> {# TODO Lien par events #}
+                                <img src="assets/img/blog/blog-1.jpg" alt=""/>
                             </a>
                         </div>
                         <div class="blog-content">
                             <div class="blog-title">
                                 <h3>
-                                    <a href="#">Quick and Easy Ginger Beef and Onion Stir Fry</a>
+                                    <a href="#">Lien par events</a>
                                 </h3>
                             </div>
                             <div class="blog-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore veniam dolore.</p>
+                                <p>
+                                    Descriptions de l'évent
+                                </p>
                             </div>
                             <div class="blog-bottom-text-link">
-                                <span>December 10, 2020</span>
-                                <a href="#">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="#">
-                                {#                                <img src="assets/img/blog/blog-2.jpg" alt=""/> #}
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-title">
-                                <h3><a href="#">How To Avoid Unexpected Restaurant Expenses</a></h3>
-                            </div>
-                            <div class="blog-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore veniam dolore.</p>
-                            </div>
-                            <div class="blog-bottom-text-link">
-                                <span>December 10, 2020</span>
-                                <a href="#">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog">
-                        <div class="blog-img">
-                            <a href="#">
-                                {#                                <img src="assets/img/blog/blog-3.jpg" alt=""/> #}
-                            </a>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-title">
-                                <h3>
-                                    <a href="#">Now Is The Right Time To Offer Take And Bake Pizza</a>
-                                </h3>
-                            </div>
-                            <div class="blog-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore veniam dolore.</p>
-                            </div>
-                            <div class="blog-bottom-text-link">
-                                <span>December 10, 2020</span>
-                                <a href="#">More Details</a>
+                                <span>Date de l'évent</span>
+                                <a href="#">Lien de l'évent</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="blog-more-btn text-center mt-15">
-                        <a class="default-btn" href="blog.html">View More Blog</a>
+                        <a class="default-btn" href="blog.html">Voir tout les Évènements</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Blog Section End -->
-
-    <!-- Press Section Start -->
-    <section class="press-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-press-content">
-                        <h3>Voted Best Delicious Lunch</h3>
-                        {#                        <img src="assets/img/press/press-1.png" alt="press image"/> #}
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-press-content">
-                        <h3>Voted Best Night BBQ</h3>
-                        {#                        <img src="assets/img/press/press-2.png" alt="press image"/> #}
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-press-content">
-                        <h3>Voted Best Quality Food</h3>
-                        {#                        <img src="assets/img/press/press-3.png" alt="press image"/> #}
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="single-press-content">
-                        <h3>Natural Organic Food</h3>
-                        {#                        <img src="assets/img/press/press-4.png" alt="press image"/> #}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Press Section End -->
-
-    <!-- Start Footer Area -->
-    <footer class="footer-area ptb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
-                    <div class="single-footer-widget">
-                        <div class="footer-heading">
-                            <h3>Our Location</h3>
-                        </div>
-                        <p>526 Melrose Street,
-                            <br> Water Mill, 11976 New York
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
-                    <div class="single-footer-widget">
-                        <div class="footer-heading">
-                            <h3>Opening Hours</h3>
-                        </div>
-                        <p>Monday to Saturday
-                            <br>8:00 AM - 11:00 PM
-                            <br>Closed Sundays
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 footer-box-item">
-                    <div class="single-footer-widget">
-                        <div class="footer-heading">
-                            <h3>Contact Info</h3>
-                        </div>
-                        <div class="footer-info-contact">
-                            <a class="footer-number" href="tel:0802235678">+080 707 555-321</a>
-                        </div>
-                        <div class="footer-info-contact">
-                            <a href="mailto:demo@example.com">demo@example.com</a>
-                        </div>
-                        <ul class="footer-social">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer Section -->
-
-    <!-- Start Copy Right Section -->
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <p>Romaric Rapiné © 2023</p>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <ul>
-                        <li>
-                            <a href="terms-condition.html">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Copy Right Section -->
-
-    <!-- Start Go Top Section -->
-    <div class="go-top">
-        <i class="fas fa-chevron-up"></i>
-        <i class="fas fa-chevron-up"></i>
-    </div>
-    <!-- End Go Top Section -->
+    <!-- Event Section End -->
 
 {% endblock %}
