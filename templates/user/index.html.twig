@@ -142,80 +142,18 @@
     <section class="menu-day-area section-padding ">
         <div class="container">
             <div class="section-title">
-                <h2>Restauration</h2>
+                <h5>La carte du Bar</h5>
+                <h2>Nos Boissons</h2>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="menu-day-product-content">
                         <div class="menu-day-tab-header">
                             <ul class="menu-day-tab-list">
-                                {% for _categories in categories_entrer %}
-                                    <li class="active">
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_plat %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_dessert %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_burger %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_salade %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_poisson %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                                {% for _categories in categories_menu %}
-                                    <li>
-                                        <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
-                                            <br>
-                                            {{ _categories.name }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
                                 {% for _categories in categories_boisson_chaude %}
                                     <li>
                                         <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
+                                            <i class="icofont-tea"></i>
                                             <br>
                                             {{ _categories.name }}
                                         </a>
@@ -224,7 +162,7 @@
                                 {% for _categories in categories_boisson_soft %}
                                     <li>
                                         <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
+                                            <i class="icofont-soft-drinks"></i>
                                             <br>
                                             {{ _categories.name }}
                                         </a>
@@ -233,7 +171,7 @@
                                 {% for _categories in categories_biere %}
                                     <li>
                                         <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
+                                            <i class="icofont-beer"></i>
                                             <br>
                                             {{ _categories.name }}
                                         </a>
@@ -242,7 +180,7 @@
                                 {% for _categories in categories_vin %}
                                     <li>
                                         <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
+                                            <i class="icofont-grapes"></i>
                                             <br>
                                             {{ _categories.name }}
                                         </a>
@@ -251,170 +189,23 @@
                                 {% for _categories in categories_cocktail %}
                                     <li>
                                         <a href="#tab-menu-{{ _categories.id }}">
-                                            <i class="icofont-fruits"></i>
+                                            <i class="icofont-cocktail"></i>
                                             <br>
                                             {{ _categories.name }}
                                         </a>
                                     </li>
                                 {% endfor %}
+                                <li>
+                                    <a href="#carte">
+                                        <i class="icofont-restaurant-menu"></i>
+                                        <br>
+                                        La Restauration
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="menu-day-main-tabs-content">
-                            <div class="menu-single-tab-content active" id="tab-menu-1">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_entrer %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-2">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_plat %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-3">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_dessert %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-4">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_burger %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-5">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_salade %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-6">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_poisson %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-7">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        {% for _categories in categories_menu %}
-                                            {% for _products in _categories.products %}
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {% endfor %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-8">
+                            <div class="menu-single-tab-content active" id="tab-menu-8">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
                                         {% for _categories in categories_boisson_chaude %}
@@ -422,7 +213,7 @@
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
-                                                            <a class="menu-product-title"
+                                                            <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
                                                             <p>Our passion for the excellent food</p>
                                                         </div>
@@ -444,7 +235,7 @@
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
-                                                            <a class="menu-product-title"
+                                                            <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
                                                             <p>Our passion for the excellent food</p>
                                                         </div>
@@ -466,7 +257,7 @@
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
-                                                            <a class="menu-product-title"
+                                                            <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
                                                             <p>Our passion for the excellent food</p>
                                                         </div>
@@ -488,7 +279,7 @@
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
-                                                            <a class="menu-product-title"
+                                                            <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
                                                             <p>Our passion for the excellent food</p>
                                                         </div>
@@ -510,7 +301,7 @@
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
-                                                            <a class="menu-product-title"
+                                                            <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
                                                             <p>Our passion for the excellent food</p>
                                                         </div>
@@ -521,6 +312,27 @@
                                                 </div>
                                             {% endfor %}
                                         {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-single-tab-content" id="carte">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
+                                                <div class="menu-single-product-horizontal">
+                                                    <div class="menu-product-info-box">
+                                                        <div class="menu-product-details">
+                                                            <a class="menu-product-title"
+                                                               href="{{ path('app_carte_user') }}">
+                                                                Cliquez ici pour visitez notre carte
+                                                            </a>
+                                                            <p>Description </p>
+                                                        {# TODO : Changer la descriptions et trouver quelques pour le prix ou ne rien mettre #}
+                                                        </div>
+                                                        <div class="menu-product-price">
+                                                            <span>C'est une vanne</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                     </div>
                                 </div>
                             </div>

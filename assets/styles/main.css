@@ -1586,8 +1586,8 @@ dl, ol, ul {
 }
 .menu-day-product-content .menu-day-tab-list li {
     display: inline-block;
-    padding-right: 30px;
-    margin-right: 30px;
+    padding: 0 35px;
+    margin: 15px 0;
     border-right: 1px dashed #bbb;
     vertical-align: top;
 }
@@ -3968,4 +3968,8 @@ blockquote::after, .blockquote::after {
 .single-privacy h3 {
     font-size: 20px;
     margin: 0 0 12px 0;
+}
+
+.offhref {
+    pointer-events: none;
 }
