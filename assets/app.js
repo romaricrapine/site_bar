@@ -11,6 +11,13 @@ import './styles/main.css';
 import './styles/responsive.css';
 import './styles/bootstrap.css';
 import './styles/animate.css';
+import './styles/flaticon.css';
+import './styles/fontawesome.min.css';
+import './styles/icofont.min.css';
+import './styles/magnific-popup.min.css';
+import './styles/meanmenu.css';
+import './styles/nice-select.min.css';
+import './styles/swiper.min.css';
 
 // start the Stimulus application
 import './bootstrap';

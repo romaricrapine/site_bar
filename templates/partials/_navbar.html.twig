@@ -11,10 +11,17 @@
         <div class="container">
             <div class="vegan-responsive-menu">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="{{ asset('build/images/logo.png') }}" class="white-logo" alt="logo">
-                        <img src="{{ asset('build/images/logo-black.png') }}" class="black-logo" alt="logo">
-                    </a>
+                    {% if app.request.attributes.get('_route') == 'app_home_user' %}
+                        <a href="#">
+                            <img src="{{ asset('build/images/logo.png') }}" class="white-logo" alt="logo">
+                            <img src="{{ asset('build/images/logo-black.png') }}" class="black-logo" alt="logo">
+                        </a>
+                    {% else %}
+                        <a href="{{ path('app_home_user') }}">
+                            <img src="{{ asset('build/images/logo.png') }}" class="white-logo" alt="logo">
+                            <img src="{{ asset('build/images/logo-black.png') }}" class="black-logo" alt="logo">
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         </div>
