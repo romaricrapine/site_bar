@@ -1143,11 +1143,17 @@ dl, ol, ul {
     z-index: 99;
     -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
     box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
-    background: #c5c5c5 !important;
+    background: #adadad !important;
+    opacity: 75%;
     -webkit-animation: 500ms ease-in-out 0s normal fadeInDown;
     animation: 500ms ease-in-out 0s normal fadeInDown;
     -webkit-transition: 0.4s;
     transition: 0.4s;
+}
+
+#navbarSupportedContent > div > a.default-btn {
+    color: #040404;
+    border: 2px solid #040404;
 }
 
 .navbar-area.is-sticky .navbar-nav .nav-item a {
@@ -1155,7 +1161,7 @@ dl, ol, ul {
 }
 
 .navbar-area.is-sticky .navbar-nav .nav-item a:hover, .navbar-area.is-sticky .navbar-nav .nav-item a:focus, .navbar-area.is-sticky .navbar-nav .nav-item a.active {
-    color: #fbc31b;
+    color: #040404;
 }
 
 .navbar-area.is-sticky .vegan-nav .navbar-brand .white-logo {
