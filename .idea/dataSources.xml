@@ -5,7 +5,7 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\pcres\Desktop\site_bar\var\data.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\Users\Romaric\Desktop\Sites_BHV_2\var\data.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

@@ -36,12 +36,17 @@ class ProductsCrudController extends AbstractCrudController
                 ->onlyOnForms(),
             MoneyField::new('price')
                 ->setCurrency('EUR')
+                ->setStoredAsCents(false)
+                ->setNumDecimals(2)
                 ->setLabel('Prix'),
             ArrayField::new('quantity')
                 ->setHelp('<div style="color: white">Ajouter un nouvel élément s\'il y a plusieurs possibilités (25cl/33cl/50cl)</div>')
                 ->setLabel('Quantité en CL'),
             PercentField::new('percent_alcool')
                 ->setLabel('Degré d\'Alcool en %')
+                ->setNumDecimals(1)
+                ->setRoundingMode(\NumberFormatter::DECIMAL)
+                ->setStoredAsFractional(false)
                 ->onlyOnForms(),
             AssociationField::new('categorie')
                 ->setLabel('Choisir la Catégorie'),

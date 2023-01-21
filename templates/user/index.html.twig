@@ -149,471 +149,158 @@
                     <div class="menu-day-product-content">
                         <div class="menu-day-tab-header">
                             <ul class="menu-day-tab-list">
-{#                                {% for _products in product %}#}
-                                    <li>
-{#                                        <a href="#tab-menu-{{ _products.id }}">#}
+                                {% for _categories in categories_entrer %}
+                                    <li class="active">
+                                        <a href="#tab-menu-1">
                                             <i class="icofont-fruits"></i>
                                             <br>
-{#                                            {{ _products.tagSubCatego }}#}
+                                            {{ _categories.name }}
                                         </a>
                                     </li>
-{#                                {% endfor %}#}
-                                <li>
-                                    <a href="#tab-menu-2">
-                                        <i class="icofont-fruits"></i>
-                                        <br>
-                                        CATEGO 2
-                                    </a>
-                                </li>
+                                {% endfor %}
+                                {% for _categories in categories_plat %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_dessert %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_burger %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_salade %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_poisson %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_menu %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_boisson_chaude %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_boisson_soft %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_biere %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_vin %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                                {% for _categories in categories_cocktail %}
+                                    <li>
+                                        <a href="#tab-menu-2">
+                                            <i class="icofont-fruits"></i>
+                                            <br>
+                                            {{ _categories.name }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                         <div class="menu-day-main-tabs-content">
-                            <div class="menu-single-tab-content active" id="tab-menu-">
+                            <div class="menu-single-tab-content active" id="tab-menu-1">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-{#                                        {% for _products in product %}#}
-{#                                            {% if _products.active == true %}#}
+                                        {% for _categories in categories_biere %}
+                                            {% for _products in _categories.products %}
                                                 <div class="menu-single-product-horizontal">
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title"
-{#                                                               href="#">{{ _products.name }}</a>#}
-{#                                                            <div style="color: #c1c1c1">{{ _products.descriptions|raw }}</div>#}
+                                                               href="#">{{ _products.name }}</a>
+                                                            <p>Our passion for the excellent food</p>
                                                         </div>
                                                         <div class="menu-product-price">
-{#                                                            {% if _products.firstOptions == true %}#}
-                                                                <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-{#                                                                    {{ _products.nameFOptions }}#}
-{#                                                                    {% if _products.nameFOptions == true %}#}
-                                                                        :
-{#                                                                    {% endif %}#}
-{#                                                                    {{ _products.priceFOptions / 100 }} €#}
-                                                                    </span>
-{#                                                            {% endif %}#}
-                                                        </div>
-                                                        <div class="menu-product-price">
-{#                                                            {% if _products.secondOptions == true %}#}
-                                                                <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-{#                                                                    {{ _products.nameSOptions }}#}
-{#                                                                    {% if _products.nameFOptions == true %}#}
-                                                                        :
-{#                                                                    {% endif %}#}
-{#                                                                    {{ _products.priceSOptions / 100 }} €#}
-                                                                    </span>
-{#                                                            {% endif %}#}
-                                                        </div>
-                                                        <div class="menu-product-price">
-{#                                                            {% if _products.thirdOptions == true %}#}
-                                                                <span style="color: #fbc31b;font-size: 15px;font-weight: 600;">
-{#                                                                    {{ _products.nameTOptions }}#}
-{#                                                                    {% if _products.nameFOptions == true %}#}
-                                                                        :
-{#                                                                    {% endif %}#}
-{#                                                                    {{ _products.priceTOptions / 100 }} €#}
-                                                                    </span>
-{#                                                            {% endif %}#}
+                                                            <span>$2.00</span>
                                                         </div>
                                                     </div>
                                                 </div>
-{#                                            {% endif %}#}
-{#                                        {% endfor %}#}
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Brown shrimp Ranhofer</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Moules marinière</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$6.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Smoky salmon</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Garlic chilli clams</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$12.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Sea bream ceviche</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Seared tuna tataki</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$5.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Green gazpacho</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            {% endfor %}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu-single-tab-content" id="tab-menu-3">
+                            <div class="menu-single-tab-content" id="tab-menu-2">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Lobster Bisque</a>
-                                                    <p>Our passion for the excellent food</p>
+                                        {% for _categories in categories_plat %}
+                                            {% for _products in _categories.products %}
+                                                <div class="menu-single-product-horizontal">
+                                                    <div class="menu-product-info-box">
+                                                        <div class="menu-product-details">
+                                                            <a class="menu-product-title"
+                                                               href="#">{{ _products.name }}</a>
+                                                            <p>Our passion for the excellent food</p>
+                                                        </div>
+                                                        <div class="menu-product-price">
+                                                            <span>$2.00</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="menu-product-price">
-                                                    <span>$12.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Buffalo Wings or Tenders</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Mozzarella Sticks</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$6.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Grilled chicken</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$6.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Onion Rings</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$12.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Caesar Selections</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Crab Cake Sandwich</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$5.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Roast turkey</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$5.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-4">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Plump lobster meat</a>
-                                                    <p>Our passion erazerazerazerazerzaerazerazerazer the excellent
-                                                        food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$12.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Tuna salad</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">French onion soup</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$6.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Soup and Sandwich</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$12.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Crisp romaine lettuce</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$2.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">savory crouton</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$5.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="menu-single-tab-content" id="tab-menu-4">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details">
-                                                    <a class="menu-product-title" href="#">Coke, Coke Light and Tab</a>
-                                                    <p>Our passion for the excellent food</p>
-                                                </div>
-                                                <div class="menu-product-price">
-                                                    <span>$10.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="menu-single-product-horizontal">
-                                            <div class="menu-product-info-box">
-                                                <div class="menu-product-details"
-                                                <a class="menu-product-title" href="#">Fanta</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$1.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Lemonade</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$3.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Ginger ale</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$8.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Dry Lemon Appletizer</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$7.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Fresh Citrus</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$7.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-single-tab-content" id="tab-menu-5">
-                            <div class="row">
-                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Mixed berry mousse</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$12.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Mango and coconut</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$2.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Homemade carrot cake</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$6.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Sponge Cake</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$12.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Full Month Cakes</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$2.00</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="menu-single-product-horizontal">
-                                        <div class="menu-product-info-box">
-                                            <div class="menu-product-details">
-                                                <a class="menu-product-title" href="#">Sliced Cake</a>
-                                                <p>Our passion for the excellent food</p>
-                                            </div>
-                                            <div class="menu-product-price">
-                                                <span>$5.00</span>
-                                            </div>
-                                        </div>
+                                            {% endfor %}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -621,7 +308,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- Menu of The Day Section End -->

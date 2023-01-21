@@ -12,28 +12,35 @@ use Symfony\Component\Routing\Annotation\Route;
 class UserController extends AbstractController
 {
 
-//    private CategoriesRepository $categoriesRepository;
-//    private SubCategoRepository $subCategoRepository;
-//    private ProductsRepository $productsRepository;
-//
-//    public function __construct(
-//        CategoriesRepository $categoriesRepository,
-//        SubCategoRepository $subCategoRepository,
-//        ProductsRepository $productsRepository
-//    )
-//    {
-//        $this->categoriesRepository = $categoriesRepository;
-//        $this->subCategoRepository = $subCategoRepository;
-//        $this->productsRepository = $productsRepository;
-//    }
+    private CategoriesRepository $categoriesRepository;
+    private ProductsRepository $productsRepository;
+
+    public function __construct(
+        CategoriesRepository $categoriesRepository,
+        ProductsRepository $productsRepository
+    )
+    {
+        $this->categoriesRepository = $categoriesRepository;
+        $this->productsRepository = $productsRepository;
+    }
 
     #[Route('/', name: 'app_home_user')]
     public function index(): Response
     {
         return $this->render('user/index.html.twig', [
-//            'categorie' => $this->categoriesRepository->findAll(),
-//            'subCategorie' => $this->subCategoRepository->findAll(),
-//            'product' => $this->productsRepository->findAll(),
+            'categories_entrer' => $this->categoriesRepository->findBy(array('name' => 'Entrée')),
+            'categories_plat' => $this->categoriesRepository->findBy(array('name' => 'Plat')),
+            'categories_dessert' => $this->categoriesRepository->findBy(array('name' => 'Dessert')),
+            'categories_burger' => $this->categoriesRepository->findBy(array('name' => 'Burger')),
+            'categories_salade' => $this->categoriesRepository->findBy(array('name' => 'Salade')),
+            'categories_poisson' => $this->categoriesRepository->findBy(array('name' => 'Poisson')),
+            'categories_menu' => $this->categoriesRepository->findBy(array('name' => 'Menu')),
+            'categories_boisson_chaude' => $this->categoriesRepository->findBy(array('name' => 'Boisson Chaude')),
+            'categories_boisson_soft' => $this->categoriesRepository->findBy(array('name' => 'Boisson Soft')),
+            'categories_biere' => $this->categoriesRepository->findBy(array('name' => 'Bière')),
+            'categories_vin' => $this->categoriesRepository->findBy(array('name' => 'Vin')),
+            'categories_cocktail' => $this->categoriesRepository->findBy(array('name' => 'Cocktail')),
+            'products' => $this->productsRepository->findAll(),
         ]);
     }
 }

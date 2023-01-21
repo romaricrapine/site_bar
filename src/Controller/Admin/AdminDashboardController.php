@@ -43,12 +43,12 @@ class AdminDashboardController extends AbstractDashboardController
                 MenuItem::linkToCrud('Afficher les Produits', 'fas fa-eye', Products::class)
             ]);
 
-        yield MenuItem::section('Gérér les Catégories');
-        yield MenuItem::subMenu('Les Catégories', 'fas fa-bars')
-            ->setSubItems([
-                MenuItem::linkToCrud('Ajouter uns Catégorie', 'fas fa-plus', Categories::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
-                MenuItem::linkToCrud('Afficher les Catégories', 'fas fa-eye', Categories::class)
-            ]);
+//        yield MenuItem::section('Gérér les Catégories');
+//        yield MenuItem::subMenu('Les Catégories', 'fas fa-bars')
+//            ->setSubItems([
+//                MenuItem::linkToCrud('Ajouter uns Catégorie', 'fas fa-plus', Categories::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
+//                MenuItem::linkToCrud('Afficher les Catégories', 'fas fa-eye', Categories::class)
+//            ]);
 
         yield MenuItem::section('Gérer les Événements');
         yield MenuItem::subMenu('Les Événements', 'fas fa-bars')

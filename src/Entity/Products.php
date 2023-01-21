@@ -21,10 +21,10 @@ class Products
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $price = null;
+    private ?float $price = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2, nullable: true)]
-    private ?string $percentAlcool = null;
+    #[ORM\Column(nullable: true)]
+    private ?float $percentAlcool = null;
 
     #[ORM\Column(type: Types::ARRAY, nullable: true)]
     private array $quantity = [];
@@ -64,24 +64,24 @@ class Products
         return $this;
     }
 
-    public function getPrice(): ?int
+    public function getPrice(): ?float
     {
         return $this->price;
     }
 
-    public function setPrice(int $price): self
+    public function setPrice(float $price): self
     {
         $this->price = $price;
 
         return $this;
     }
 
-    public function getPercentAlcool(): ?string
+    public function getPercentAlcool(): ?float
     {
         return $this->percentAlcool;
     }
 
-    public function setPercentAlcool(?string $percentAlcool): self
+    public function setPercentAlcool(?float $percentAlcool): self
     {
         $this->percentAlcool = $percentAlcool;
 

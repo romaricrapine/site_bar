@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Users;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class EventController extends AbstractController
+class AboutController extends AbstractController
 {
-    #[Route('/event', name: 'app_event_user')]
+    #[Route('/about', name: 'app_about_user')]
     public function index(): Response
     {
-        return $this->render('user/event.html.twig', [
-            'controller_name' => 'EventController',
+        return $this->render('user/about.html.twig', [
+            'controller_name' => 'AboutController',
         ]);
     }
 }
