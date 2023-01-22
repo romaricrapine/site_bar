@@ -215,11 +215,41 @@
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
+                                                            <div style="color: white">{{ _products.description | raw }}</div>
                                                         </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
+                                                        {% if _products.activeFOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.fOption }}
+                                                                    {% if _products.fOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceFOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeSOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.SOption }}
+                                                                    {% if _products.SOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceSOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeTOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.TOption }}
+                                                                    {% if _products.TOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceTOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -237,11 +267,41 @@
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title offhref"
                                                                href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
+                                                            <div style="color: white">{{ _products.description | raw }}</div>
                                                         </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
+                                                        {% if _products.activeFOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.fOption }}
+                                                                    {% if _products.fOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceFOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeSOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.SOption }}
+                                                                    {% if _products.SOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceSOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeTOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.TOption }}
+                                                                    {% if _products.TOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceTOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -258,12 +318,46 @@
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title offhref"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
+                                                               href="#">{{ _products.name }}
+                                                                {% if _products.percentAlcool == true %}
+                                                                    - {{ _products.percentAlcool }}%
+                                                                {% endif %}
+                                                            </a>
+                                                            <div style="color: white">{{ _products.description | raw }}</div>
                                                         </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
+                                                        {% if _products.activeFOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.fOption }}
+                                                                    {% if _products.fOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceFOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeSOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.SOption }}
+                                                                    {% if _products.SOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceSOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeTOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.TOption }}
+                                                                    {% if _products.TOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceTOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -280,12 +374,46 @@
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title offhref"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
+                                                               href="#">{{ _products.name }}
+                                                                {% if _products.percentAlcool == true %}
+                                                                    - {{ _products.percentAlcool }}%
+                                                                {% endif %}
+                                                            </a>
+                                                            <div style="color: white">{{ _products.description | raw }}</div>
                                                         </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
+                                                        {% if _products.activeFOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.fOption }}
+                                                                    {% if _products.fOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceFOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeSOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.SOption }}
+                                                                    {% if _products.SOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceSOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeTOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.TOption }}
+                                                                    {% if _products.TOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceTOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -302,12 +430,46 @@
                                                     <div class="menu-product-info-box">
                                                         <div class="menu-product-details">
                                                             <a class="menu-product-title offhref"
-                                                               href="#">{{ _products.name }}</a>
-                                                            <p>Our passion for the excellent food</p>
+                                                               href="#">{{ _products.name }}
+                                                                {% if _products.percentAlcool == true %}
+                                                                    - {{ _products.percentAlcool }}%
+                                                                {% endif %}
+                                                            </a>
+                                                            <p>{{ _products.description }}</p>
                                                         </div>
-                                                        <div class="menu-product-price">
-                                                            <span>$2.00</span>
-                                                        </div>
+                                                        {% if _products.activeFOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.fOption }}
+                                                                    {% if _products.fOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceFOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeSOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.SOption }}
+                                                                    {% if _products.SOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceSOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
+                                                        {% if _products.activeTOption == '1' %}
+                                                            <div class="menu-product-price">
+                                                                <span>
+                                                                    {{ _products.TOption }}
+                                                                    {% if _products.TOption == true %}
+                                                                        CL :
+                                                                    {% endif %}
+                                                                </span>
+                                                                <span>{{ _products.priceTOption }}€</span>
+                                                            </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             {% endfor %}
@@ -318,21 +480,21 @@
                             <div class="menu-single-tab-content" id="carte">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                                                <div class="menu-single-product-horizontal">
-                                                    <div class="menu-product-info-box">
-                                                        <div class="menu-product-details">
-                                                            <a class="menu-product-title"
-                                                               href="{{ path('app_carte_user') }}">
-                                                                Cliquez ici pour visitez notre carte
-                                                            </a>
-                                                            <p>Description </p>
-                                                        {# TODO : Changer la descriptions et trouver quelques pour le prix ou ne rien mettre #}
-                                                        </div>
-                                                        <div class="menu-product-price">
-                                                            <span>C'est une vanne</span>
-                                                        </div>
-                                                    </div>
+                                        <div class="menu-single-product-horizontal">
+                                            <div class="menu-product-info-box">
+                                                <div class="menu-product-details">
+                                                    <a class="menu-product-title"
+                                                       href="{{ path('app_carte_user') }}">
+                                                        Cliquez ici pour visitez notre carte
+                                                    </a>
+                                                    <p>Description </p>
+                                                    {# TODO : Changer la descriptions et trouver quelques pour le prix ou ne rien mettre #}
                                                 </div>
+                                                <div class="menu-product-price">
+                                                    <span>C'est une vanne</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

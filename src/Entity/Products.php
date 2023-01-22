@@ -20,20 +20,41 @@ class Products
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column]
-    private ?float $price = null;
-
     #[ORM\Column(nullable: true)]
     private ?float $percentAlcool = null;
-
-    #[ORM\Column(type: Types::ARRAY, nullable: true)]
-    private array $quantity = [];
 
     #[ORM\Column(nullable: true)]
     private ?bool $active = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     private ?Categories $categorie = null;
+
+    #[ORM\Column]
+    private ?float $price_f_option = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?float $price_s_option = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?float $price_t_option = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $f_option = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $s_option = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $t_option = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $active_f_option = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $active_s_option = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $active_t_option = null;
 
     public function getId(): ?int
     {
@@ -64,18 +85,6 @@ class Products
         return $this;
     }
 
-    public function getPrice(): ?float
-    {
-        return $this->price;
-    }
-
-    public function setPrice(float $price): self
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
     public function getPercentAlcool(): ?float
     {
         return $this->percentAlcool;
@@ -84,18 +93,6 @@ class Products
     public function setPercentAlcool(?float $percentAlcool): self
     {
         $this->percentAlcool = $percentAlcool;
-
-        return $this;
-    }
-
-    public function getQuantity(): array
-    {
-        return $this->quantity;
-    }
-
-    public function setQuantity(?array $quantity): self
-    {
-        $this->quantity = $quantity;
 
         return $this;
     }
@@ -120,6 +117,114 @@ class Products
     public function setCategorie(?Categories $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getPriceFOption(): ?float
+    {
+        return $this->price_f_option;
+    }
+
+    public function setPriceFOption(float $price_f_option): self
+    {
+        $this->price_f_option = $price_f_option;
+
+        return $this;
+    }
+
+    public function getPriceSOption(): ?float
+    {
+        return $this->price_s_option;
+    }
+
+    public function setPriceSOption(?float $price_s_option): self
+    {
+        $this->price_s_option = $price_s_option;
+
+        return $this;
+    }
+
+    public function getPriceTOption(): ?float
+    {
+        return $this->price_t_option;
+    }
+
+    public function setPriceTOption(?float $price_t_option): self
+    {
+        $this->price_t_option = $price_t_option;
+
+        return $this;
+    }
+
+    public function getFOption(): ?string
+    {
+        return $this->f_option;
+    }
+
+    public function setFOption(?string $f_option): self
+    {
+        $this->f_option = $f_option;
+
+        return $this;
+    }
+
+    public function getSOption(): ?string
+    {
+        return $this->s_option;
+    }
+
+    public function setSOption(?string $s_option): self
+    {
+        $this->s_option = $s_option;
+
+        return $this;
+    }
+
+    public function getTOption(): ?string
+    {
+        return $this->t_option;
+    }
+
+    public function setTOption(?string $t_option): self
+    {
+        $this->t_option = $t_option;
+
+        return $this;
+    }
+
+    public function isActiveFOption(): ?bool
+    {
+        return $this->active_f_option;
+    }
+
+    public function setActiveFOption(?bool $active_f_option): self
+    {
+        $this->active_f_option = $active_f_option;
+
+        return $this;
+    }
+
+    public function isActiveSOption(): ?bool
+    {
+        return $this->active_s_option;
+    }
+
+    public function setActiveSOption(?bool $active_s_option): self
+    {
+        $this->active_s_option = $active_s_option;
+
+        return $this;
+    }
+
+    public function isActiveTOption(): ?bool
+    {
+        return $this->active_t_option;
+    }
+
+    public function setActiveTOption(?bool $active_t_option): self
+    {
+        $this->active_t_option = $active_t_option;
 
         return $this;
     }

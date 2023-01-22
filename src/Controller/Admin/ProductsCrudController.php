@@ -34,14 +34,41 @@ class ProductsCrudController extends AbstractCrudController
             TextEditorField::new('description')
                 ->setLabel('Description')
                 ->onlyOnForms(),
-            MoneyField::new('price')
+            TextField::new('f_option')
+                ->setLabel('Option 1')
+                ->onlyOnForms(),
+            MoneyField::new('price_f_option')
                 ->setCurrency('EUR')
                 ->setStoredAsCents(false)
                 ->setNumDecimals(2)
-                ->setLabel('Prix'),
-            ArrayField::new('quantity')
-                ->setHelp('<div style="color: white">Ajouter un nouvel élément s\'il y a plusieurs possibilités (25cl/33cl/50cl)</div>')
-                ->setLabel('Quantité en CL'),
+                ->setLabel('Prix 1'),
+            BooleanField::new('active_f_option')
+                ->setLabel('On/Off Option1')
+                ->onlyOnForms(),
+            TextField::new('s_option')
+                ->setLabel('Option 2')
+                ->onlyOnForms(),
+            MoneyField::new('price_s_option')
+                ->setCurrency('EUR')
+                ->setStoredAsCents(false)
+                ->setNumDecimals(2)
+                ->setLabel('Prix 2')
+                ->onlyOnForms(),
+            BooleanField::new('active_s_option')
+                ->setLabel('On/Off Option2')
+                ->onlyOnForms(),
+            TextField::new('t_option')
+                ->setLabel('Option 3')
+                ->onlyOnForms(),
+            MoneyField::new('price_t_option')
+                ->setCurrency('EUR')
+                ->setStoredAsCents(false)
+                ->setNumDecimals(2)
+                ->setLabel('Prix 3')
+                ->onlyOnForms(),
+            BooleanField::new('active_t_option')
+                ->setLabel('On/Off Option3')
+                ->onlyOnForms(),
             PercentField::new('percent_alcool')
                 ->setLabel('Degré d\'Alcool en %')
                 ->setNumDecimals(1)
