@@ -799,17 +799,6 @@ dl, ol, ul {
 
 .vegan-nav {
     background-color: transparent;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.vegan-nav .navbar {
-    padding-right: 0;
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
 }
 
 .vegan-nav .navbar ul {
@@ -4048,4 +4037,8 @@ table.darkTable-footer thead th:first-child {
 
 table.darkTable-footer tfoot td {
     font-size: 6px;
+}
+
+.navbar {
+    padding: unset!important;
 }
