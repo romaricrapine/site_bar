@@ -54,7 +54,7 @@ class UserController extends AbstractController
     public function partials(): Response
     {
         return $this->render('template/base.html.twig', [
-            'informations' => $this->informationsRepository->findAll(),
+
         ]);
     }
 }
