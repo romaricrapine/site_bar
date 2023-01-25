@@ -49,4 +49,12 @@ class UserController extends AbstractController
             'informations' => $this->informationsRepository->findAll(),
         ]);
     }
+
+    #[Route('/', name: 'app_home_partials')]
+    public function partials(): Response
+    {
+        return $this->render('template/base.html.twig', [
+            'informations' => $this->informationsRepository->findAll(),
+        ]);
+    }
 }
