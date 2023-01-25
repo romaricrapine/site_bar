@@ -51,8 +51,8 @@ class AdministrateurCrudController extends AbstractCrudController
     {
         return $actions
             ->setPermission('delete', 'ROLE_ADMIN')
-//            ->setPermission('edit', 'ROLE_ADMIN')
-            ->setPermission('new', 'ROLE_ADMIN')
+            ->setPermission('edit', 'ROLE_ADMIN')
+            ->disable('new')
             ->setPermission(Action::BATCH_DELETE, 'ROLE_ADMIN');
     }
 

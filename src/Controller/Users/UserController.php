@@ -2,7 +2,9 @@
 
 namespace App\Controller\Users;
 
+use App\Entity\Informations;
 use App\Repository\CategoriesRepository;
+use App\Repository\InformationsRepository;
 use App\Repository\ProductsRepository;
 use App\Repository\SubCategoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,14 +16,17 @@ class UserController extends AbstractController
 
     private CategoriesRepository $categoriesRepository;
     private ProductsRepository $productsRepository;
+    private InformationsRepository $informationsRepository;
 
     public function __construct(
         CategoriesRepository $categoriesRepository,
-        ProductsRepository $productsRepository
+        ProductsRepository $productsRepository,
+        InformationsRepository $informationsRepository
     )
     {
         $this->categoriesRepository = $categoriesRepository;
         $this->productsRepository = $productsRepository;
+        $this->informationsRepository = $informationsRepository;
     }
 
     #[Route('/', name: 'app_home_user')]
@@ -41,6 +46,7 @@ class UserController extends AbstractController
             'categories_vin' => $this->categoriesRepository->findBy(array('name' => 'Vin')),
             'categories_cocktail' => $this->categoriesRepository->findBy(array('name' => 'Cocktail')),
             'products' => $this->productsRepository->findAll(),
+            'informations' => $this->informationsRepository->findAll(),
         ]);
     }
 }

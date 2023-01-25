@@ -1728,7 +1728,6 @@ dl, ol, ul {
 .store-location-opening-hours-box {
     background: rgb(0, 0, 0, 0.95);
     padding: 70px 30px;
-    text-align: center;
 }
 .contact-opening-hours-title {
     text-align: center;
@@ -1742,6 +1741,7 @@ dl, ol, ul {
 
 .single-store-location {
     margin-bottom: 30px;
+    text-align: center;
 }
 .single-store-location:last-child {
     margin-bottom: 0px;
@@ -1749,7 +1749,7 @@ dl, ol, ul {
 .single-store-location h3 {
     color: #fff;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .single-store-location h6 {
     color: #fff;
@@ -1772,6 +1772,7 @@ dl, ol, ul {
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
 /**************************************
@@ -3972,4 +3973,43 @@ blockquote::after, .blockquote::after {
 
 .offhref {
     pointer-events: none;
+}
+
+.menu-product-price {
+    font-size: 13px;
+}
+
+table.darkTable {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 2px solid #ffffff;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+    border: 1px solid #4A4A4A;
+    padding: 6px
+}
+table.darkTable tbody td {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+table.darkTable thead {
+    border-bottom: 3px solid #000000;
+}
+table.darkTable thead th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 0px solid #4A4A4A;
+}
+table.darkTable thead th:first-child {
+    border-left: none;
+}
+
+table.darkTable tfoot td {
+    font-size: 12px;
 }

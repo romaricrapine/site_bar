@@ -60,7 +60,6 @@ class AdminDashboardController extends AbstractDashboardController
         yield MenuItem::section('Gérer les Informations');
         yield MenuItem::subMenu('Les Informations', 'fas fa-bars')
             ->setSubItems([
-                MenuItem::linkToCrud('Ajouter une Information', 'fas fa-plus', Informations::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN'),
                 MenuItem::linkToCrud('Afficher les Informations', 'fas fa-eye', Informations::class)
             ]);
 
